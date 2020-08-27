@@ -1,0 +1,69 @@
+$white: #fff;
+$secondary-color: #49C5B1;
+$btn-header: #52F2D8;
+$blue: #1FAFD5;
+$pink: #FF89FF;
+$text: #6E6F71;
+$text-dark: #272727;
+//fonts
+$primary-font: 'Roboto',
+sans-serif;
+$secondary-font: 'Open Sans',
+sans-serif;
+$tertiary-font: 'Abril Fatface',
+cursive;
+//breakpoint
+$bpLarge: 106.25em;
+$bpBig: 81.25em;
+$bpMedium: 60em;
+$bpSmall: 30em;
+//
+@mixin mq-min($breakpoint) {
+    @media only screen and (min-width: $breakpoint) {
+        @content
+    }
+}
+
+@mixin mq($breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
+        @content
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit
+}
+
+::selection {
+    background-color: rgba(95, 107, 218, 0.4);
+    color: $white;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: $secondary-font;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}

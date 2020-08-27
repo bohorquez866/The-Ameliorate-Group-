@@ -1,0 +1,34 @@
+.about {
+    background-color: #ECECEC;
+    &-picture {
+        border-radius: 1rem;
+    }
+    &__head {
+        position: relative;
+        padding-top: 5rem;
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: $blue;
+            height: 100%;
+            width: 1.3rem;
+            left: -5rem;
+            top: 1rem;
+        }
+    }
+    &__head,
+    &__body {
+        width: 90%;
+        margin: 0 auto;
+    }
+    &__text {
+        &:not(:last-of-type) {
+            margin-bottom: 4rem;
+        }
+    }
+    .under-text {
+        display: block;
+        margin: 1rem 0 5rem 0;
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,34 @@
+.solutions {
+    &-title {
+        padding-bottom: 3.8rem;
+    }
+    &__text {
+        &:not(:last-of-type) {
+            margin-bottom: 4rem;
+        }
+    }
+    &__items {
+        row-gap: 15rem;
+        width: 90rem;
+        margin: 0 auto;
+    }
+    &__item {
+        grid-template-rows: auto 1fr auto;
+        &:not(:last-of-type) {
+            width: 40rem;
+        }
+        &--long {
+            position: relative;
+            text-align: initial;
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: $blue;
+                height: 30.8rem;
+                width: 1.3rem;
+                right: -5rem;
+                bottom: -7rem;
+            }
+        }
+    }
+}

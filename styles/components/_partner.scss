@@ -1,0 +1,41 @@
+.partner {
+    margin-top: 7.7rem;
+    width: 42.6rem;
+    &-2 {
+        justify-self: end;
+    }
+    &__identity {
+        font-size: 2.3rem;
+        color: $text;
+        margin: 2rem 0 4rem 0;
+        position: relative;
+        line-height: 1;
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: $blue;
+            height: 100%;
+            width: .6rem;
+            left: -2rem;
+            top: 0;
+        }
+    }
+    &__position {
+        font-size: 2.2rem;
+    }
+    &__content {
+        padding: 0 2rem;
+    }
+    &__description {
+        line-height: 1.5;
+        &:not(:last-of-type) {
+            margin-bottom: 3rem;
+        }
+    }
+    &__btns {
+        margin-right: 2rem;
+        margin-top: 2rem;
+        justify-self: end;
+        align-self: end;
+    }
+}

@@ -1,0 +1,82 @@
+h1 {
+    font-size: 6.5rem;
+    font-family: $tertiary-font;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+.slider-title {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+.span-1 {
+    margin: 2rem 0 4rem 0;
+}
+
+.grey-title {
+    font-size: 5rem;
+    color: $text;
+    font-family: $tertiary-font;
+    line-height: 1.5;
+    letter-spacing: 4px;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.grey-subtitle {
+    font-size: 2.8rem;
+    color: $text;
+    text-transform: uppercase;
+    &-big {
+        font-size: 3rem;
+        margin-bottom: 3.3rem;
+    }
+}
+
+.grey-text {
+    font-size: 2.2rem;
+    text-align: justify;
+    color: $text;
+    &--dark {
+        color: $text-dark;
+    }
+}
+
+.know-more {
+    font-size: 2.7rem;
+    color: $pink;
+    justify-self: end;
+    align-self: end;
+    font-weight: bold;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -1rem;
+        height: 3px;
+        background-color: $pink;
+    }
+}
+
+.strong-text {
+    font-size: 3rem;
+    color: $text;
+    margin-top: 13rem;
+    line-height: 1.5;
+    padding: 0 10%;
+    justify-self: center;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 1.3rem;
+        right: 0;
+        bottom: -1rem;
+        background-color: $pink;
+    }
+}

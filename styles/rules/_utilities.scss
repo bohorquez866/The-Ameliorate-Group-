@@ -1,0 +1,124 @@
+//ALl d- elements represent a display property
+.d-block {
+    display: block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+//center and align
+.center-text {
+    text-align: center;
+}
+
+.lh-1-5 {
+    line-height: 1.5;
+}
+
+.m-none {
+    margin: 0;
+}
+
+.just-end {
+    justify-self: end;
+}
+
+//grid-related
+.d-grid {
+    display: grid;
+}
+
+.grid-2x1fr {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-1x1fr {
+    grid-template-columns: 1fr;
+}
+
+.grid-3x1fr {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4x1fr {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-long {
+    grid-column: 1/-1;
+}
+
+//wrapers and containers
+.container {
+    width: 100rem;
+    margin: 0 auto;
+    padding: 10rem 0 20rem 0;
+    &-900 {
+        width: 90rem;
+    }
+}
+
+.title-wrap {
+    position: relative;
+    margin-bottom: 8rem;
+    &::before {
+        content: '';
+        position: absolute;
+        height: 95%;
+        width: 1.3rem;
+        top: 2rem;
+        left: -5rem;
+        background-color: $blue;
+    }
+}
+
+//icons
+.icon {
+    width: 8rem;
+    height: 8rem;
+    margin-right: -2.5rem;
+    &-m-none {
+        margin: 0;
+        object-fit: initial;
+    }
+}
+
+//buttons and anchors
+.btn {
+    outline: none;
+    border: none;
+    appearance: none;
+    border-radius: 5rem;
+    color: white;
+    display: block;
+    &--header {
+        background-color: $btn-header;
+        padding: 2rem 3rem;
+        font-size: 4rem;
+        font-weight: bold;
+        font-family: $primary-font;
+        justify-self: end;
+        margin-top: 5rem;
+    }
+    &--pink {
+        background-color: $pink;
+        padding: 1.5rem 4.6rem;
+        font-size: 4rem;
+        font-weight: bold;
+        font-family: $primary-font;
+        justify-self: end;
+        margin-top: 5rem;
+    }
+    &--blog {
+        padding: .9rem 3rem;
+        font-size: 2.6rem;
+        background-color: $blue;
+    }
+    &--linkedin {
+        padding: 1rem;
+        border-radius: 5rem;
+        background-color: $blue;
+        margin-right: 3rem;
+    }
+}
