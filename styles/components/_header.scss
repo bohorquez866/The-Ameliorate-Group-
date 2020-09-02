@@ -1,49 +1,55 @@
-.header {
-    color: $white;
-    height: 100vh;
-    background: url(../../assets/bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    &__content {
-        align-self: center;
-        margin: 0 auto 0 auto;
-        padding-top: 10%;
-        width: 90%;
-        align-items: center;
-        column-gap: 10rem;
-    }
-}
-
-.slider {
-    max-width: 68rem;
-    padding: 7rem;
-    mix-blend-mode: normal;
-    border-radius: 1rem;
-    font-size: 1.8rem;
-    position: relative;
-    background: rgba(0, 0, 0, 0.44);
-    overflow: hidden;
-    justify-self: end;
-    & *:not(.bg) {
-        z-index: 2;
-        position: relative;
-    }
-}
-
-.bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    background: rgba(0, 0, 0, 0.44);
-    top: 0;
-    z-index: 1;
-    filter: blur(18px);
-}
-
-.title-wrapper {
-    max-width: 70rem;
-    margin-left: 10rem;
-    position: relative;
-}
+        .header {
+            color: $white;
+            height: 100vh;
+            background: url(../../assets/bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            &__content {
+                align-self: center;
+                margin: 0 auto 0 auto;
+                padding-top: 10%;
+                width: 90%;
+                align-items: center;
+                column-gap: 10rem;
+                @include mq($bpLarge) {
+                    padding-top: 6%;
+                }
+                @include mq($bpMedium) {
+                    padding-top: 8rem;
+                    width: 100%;
+                }
+            }
+            @include mq($bpMedium) {
+                height: auto;
+                overflow: hidden;
+                padding-top: 0rem;
+            }
+        }
+        
+        .bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            background: rgba(0, 0, 0, 0.44);
+            top: 0;
+            z-index: 1;
+            filter: blur(18px);
+        }
+        
+        .title-wrapper {
+            max-width: 70rem;
+            margin-left: 10rem;
+            position: relative;
+            @include mq($bpLarge) {
+                margin: 0;
+                margin-bottom: 2rem;
+            }
+            @include mq($bpMedium) {
+                margin: 0;
+                margin-bottom: 2rem;
+                width: 90%;
+                margin: 0 auto;
+            }
+        }

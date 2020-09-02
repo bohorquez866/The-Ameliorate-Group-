@@ -1,0 +1,116 @@
+.slider {
+    max-width: 68rem;
+    padding: 7rem;
+    mix-blend-mode: normal;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    position: relative;
+    backdrop-filter: blur(18px);
+    background: rgba(0, 0, 0, 0.44);
+    overflow: hidden;
+    justify-self: end;
+    @include mq($bpLarge) {
+        padding: 3rem;
+    }
+    @include mq($bpMedium) {
+        display: grid;
+        width: 22rem;
+        padding: 1.5rem;
+        font-size: 1rem;
+        margin: 0 auto;
+        border-radius: .5rem;
+        line-height: 1.5;
+        & *:not(.bg) {
+            z-index: 2;
+            position: relative;
+        }
+    }
+    &__wrapper {
+        @include mq($bpMedium) {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(auto-fill, 22rem);
+            overflow: scroll;
+            column-gap: 1rem;
+            margin: 0 auto;
+            grid-auto-flow: column;
+            grid-template-rows: max-content;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        @include mq($bpXSmall) {
+            width: 25rem;
+        }
+    }
+    &__content {
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+}
+
+.swiper-hide-sm {
+    overflow: hidden;
+    @include mq($bpMedium) {
+        margin: 0 auto;
+    }
+    @include mq($bpSmall) {
+        margin: 0;
+    }
+}
+
+//slider controls
+.swiper-slide {
+    @include mq-min($bpMedium) {
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition-property: transform;
+    }
+}
+
+.swiper-container {
+    @include mq-min($bpMedium) {
+        width: 55rem;
+        height: 60rem;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+    @include mq-min($bpMedium) {
+        display: initial;
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        color: $secondary-color;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+    }
+}
+
+.swiper-button-prev {
+    @include mq-min($bpMedium) {
+        left: 1rem;
+        right: auto;
+    }
+}
+
+.swiper-button-next {
+    @include mq-min($bpMedium) {
+        right: 1rem;
+        left: auto;
+    }
+}

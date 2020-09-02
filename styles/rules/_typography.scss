@@ -3,15 +3,36 @@ h1 {
     font-family: $tertiary-font;
     line-height: 1.7;
     text-transform: uppercase;
+    @include mq($bpLarge) {
+        font-size: 5rem;
+    }
+    @include mq($bpBig) {
+        font-size: 4rem;
+    }
+    @include mq($bpMedium) {
+        font-size: 3.5rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+    @include mq($bpXSmall) {
+        font-size: 3.4rem;
+    }
 }
 
 .slider-title {
     font-size: 2.4rem;
     text-transform: uppercase;
+    @include mq($bpMedium) {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+    }
 }
 
 .span-1 {
     margin: 2rem 0 4rem 0;
+    @include mq($bpMedium) {
+        margin: 0 0 1rem 0;
+    }
 }
 
 .grey-title {
@@ -23,6 +44,16 @@ h1 {
     margin-bottom: 5rem;
     text-transform: uppercase;
     font-weight: normal;
+    &-black {
+        margin-bottom: 0;
+        color: $black;
+        align-self: start;
+    }
+    @include mq($bpMedium) {
+        font-size: 3rem;
+        text-align: center;
+        letter-spacing: 1px;
+    }
 }
 
 .grey-subtitle {
@@ -32,6 +63,10 @@ h1 {
     &-big {
         font-size: 3rem;
         margin-bottom: 3.3rem;
+        @include mq($bpMedium) {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
     }
 }
 
@@ -41,6 +76,10 @@ h1 {
     color: $text;
     &--dark {
         color: $text-dark;
+    }
+    @include mq($bpMedium) {
+        text-align: initial;
+        font-size: 1.9rem;
     }
 }
 
@@ -60,6 +99,10 @@ h1 {
         height: 3px;
         background-color: $pink;
     }
+    @include mq($bpMedium) {
+        margin-top: 1rem;
+        font-size: 1.9rem;
+    }
 }
 
 .strong-text {
@@ -70,6 +113,11 @@ h1 {
     padding: 0 10%;
     justify-self: center;
     position: relative;
+    @include mq($bpMedium) {
+        font-family: $tertiary-font;
+        padding: 0 2rem;
+        margin-top: 8rem;
+    }
     &::after {
         content: '';
         position: absolute;
@@ -78,5 +126,15 @@ h1 {
         right: 0;
         bottom: -1rem;
         background-color: $pink;
+        @include mq($bpMedium) {
+            width: .5rem;
+        }
     }
+}
+
+.keep-reading {
+    color: $secondary-color;
+    font-size: 1.4rem;
+    justify-self: end;
+    margin-right: 2rem;
 }

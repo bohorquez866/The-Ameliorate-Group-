@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.css">
+
     <title>The Ameliorate Group</title>
 </head>
 
@@ -13,44 +14,105 @@
     <!-- Header -->
     <header class="header">
         <!-- NAVBAR -->
-        <nav class="navbar d-grid">
+        <nav class="navbar d-flex">
             <!-- LOGO -->
             <p class="logo d-block">LOGO</p>
             <!-- BAR OPTIONS -->
             <ul class="navbar__list d-flex">
-                <li class="navbar__item"><a href="#rise" class="navbar__link">How Women Rise</a></li>
-                <li class="navbar__item"><a href="#rise" class="navbar__link">Our Solutions</a></li>
-                <li class="navbar__item"><a href="#news" class="navbar__link">News</a></li>
-                <li class="navbar__item"><a href="#rise" class="navbar__link">About</a></li>
+
+                <li class="navbar__item navbar__item-1">
+                    <a href="#rise" class="navbar__link">How Women Rise</a>
+
+                </li>
+
+                <li class="navbar__item navbar__item-2">
+                    <a href="#rise" class="navbar__link">Our Solutions</a>
+                    <div class="submenu-wrap">
+                        <div class="submenu center-text">
+                            <h3 class="submenu-title">Learning Solutions</h3>
+                            <a href="" class="submenu-link">Female Empowerment</a>
+                            <a href="" class="submenu-link">Leadership Coaching</a>
+                            <a href="" class="submenu-link">Team Coaching</a>
+                        </div>
+
+                        <div class="submenu  center-text">
+                            <h3 class="submenu-title">Executive Coaching</h3>
+                            <a href="" class="submenu-link">Gender Empowerment</a>
+                            <a href="" class="submenu-link">Management & Leadership</a>
+                            <a href="" class="submenu-link">Team Dynamics</a>
+                            <a href="" class="submenu-link">Sales Skill Development</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="navbar__item navbar__item-3"><a href="#news" class="navbar__link">News</a></li>
+                <li class="navbar__item navbar__item-4"><a href="#rise" class="navbar__link">About</a></li>
             </ul>
+            <div class="burger-menu">
+                <span class="burger-menu__btn"></span>
+            </div>
         </nav>
 
-        <section class="header__content d-grid grid-2x1fr">
+        <section class="header__content d-grid grid-2x1fr grid-1x1fr-med">
             <div class="title-wrapper d-grid">
                 <h1>Developing People Across The World</h1>
-                <a href="#" class="btn btn--header">TELL ME HOW</a>
+                <a href="#" class="btn btn--header btn--header-desk">TELL ME HOW</a>
             </div>
 
+            <!-- Slider -->
 
-            <section class="slider">
-                <div class="bg"></div>
-                <img src="./assets/img.png" alt="background">
+            <section class=" swiper-container swiper-hide-sm">
+                <div class="swiper-slide slider__wrapper">
+                    <article class="slider swiper-slide">
 
-                <h2 class="slider-title">Do you know where you are going as a woman</h2>
-                <p>
-                    <span class="span-1 d-block">our unique value is your superpower</span> This topic keeps coming up for me in workshops and discussions with leading ladies. How well do working women know and appreciate their unique value in the workplace?
-                    Let’s pause for a moment to consider one perspective of looking at this.
-                </p>
+                        <img src="./assets/img.png" alt="background">
 
-                <strong>Keep reading</strong>
+                        <h2 class="slider-title">Do you know where you are going as a woman in the work place?</h2>
+                        <p class="slider__content">
+                            <span class="span-1 d-block">our unique value is your superpower</span> This topic keeps coming up for me in workshops and discussions with leading ladies. How well do working women know and appreciate their unique value in
+                            the workplace? Let’s pause for a moment to consider one perspective of looking at this.
+                        </p>
+
+                        <strong class="keep-reading">Keep reading</strong>
+                    </article>
+                    <article class="slider swiper-slide">
+                        <div class="bg"></div>
+                        <img src="./assets/img.png" alt="background">
+
+                        <h2 class="slider-title">Do you know where you are going as a woman?</h2>
+                        <p class="slider__content">
+                            <span class="span-1 d-block">our unique value is your superpower</span> This topic keeps coming up for me in workshops and discussions with leading ladies. How well do working women know and appreciate their unique value in
+                            the workplace? Let’s pause for a moment to consider one perspective of looking at this.
+                        </p>
+
+                        <strong class="keep-reading">Keep reading</strong>
+                    </article>
+
+                    <article class="slider swiper-slide">
+                        <div class="bg"></div>
+                        <img src="./assets/img.png" alt="background">
+
+                        <h2 class="slider-title">Do you know where you are going as a woman in the work place?????</h2>
+                        <p class="slider__content">
+                            <span class="span-1 d-block">our unique value is your superpower</span> This topic keeps coming up for me in workshops and discussions with leading ladies. How well do working women know and appreciate their unique value in
+                            the workplace? Let’s pause for a moment to consider one perspective of looking at this.
+                        </p>
+
+                        <strong class="keep-reading">Keep reading</strong>
+                    </article>
+                    <div class="swiper-button-prev">&#10094;</div>
+                    <div class="swiper-button-next">&#10095;</div>
+                </div>
+
             </section>
+
         </section>
+        <a href="#" class="btn btn--header btn--header-mobile">TELL ME HOW</a>
     </header>
 
     <main>
         <section class="solutions container">
             <article class="title-wrap">
-
                 <h2 class="grey-title solutions__item-title">SUPERPOWERING LEADERS, TEAMS AND WOMEN IN THE WORKPLACE</h2>
 
                 <p class="solutions__text grey-text grey-text--dark">The ameliorate group (TAG) creates sustainable improvement through a blended learning approach.</p>
@@ -59,35 +121,35 @@
                     teams and inspire more inclusive organisations.</p>
             </article>
 
-            <article class="solutions__items d-grid grid-2x1fr">
+            <article class="solutions__items d-grid grid-2x1fr grid-1x1fr-med">
                 <!-- Learning Solutions -->
                 <figure class="solutions__item d-grid">
-                    <h3 class="grey-subtitle solutions__item-title">
+                    <h3 class="grey-subtitle solutions__item-title solutions__item-title--sm">
                         <img src="./assets/item-1.svg" class="icon" alt="learning solution icons"> Learning solutions
                     </h3>
 
-                    <p class="grey-text center-text lh-1-5">Bespoke training workshops and signature development programs designed to generate new perspectives and catalyze action towards new ways of working for management, leadership, team performance and gender empowerment.</p>
+                    <p class="grey-text center-text lh-1-5 left-text-med">Bespoke training workshops and signature development programs designed to generate new perspectives and catalyze action towards new ways of working for management, leadership, team performance and gender empowerment.</p>
 
-                    <a href="" class="know-more">Know More</a>
+                    <a href="#" class="know-more">Know More</a>
                 </figure>
                 <!-- Executive Coaching -->
                 <figure class="solutions__item d-grid just-end">
 
-                    <h3 class="grey-subtitle solutions__item-title">
+                    <h3 class="grey-subtitle solutions__item-title solutions__item-title--sm">
                         <img src="./assets/item-2.svg" class="icon" alt="learning solution icons"> Executive Coaching
                     </h3>
 
-                    <p class="grey-text center-text lh-1-5">Executive coaching programs that create transformative shifts in behaviour, cultivate desirable leadership traits and sustain optimal performance for current and future leaders and teams.</p>
+                    <p class="grey-text center-text lh-1-5 left-text-med">Executive coaching programs that create transformative shifts in behaviour, cultivate desirable leadership traits and sustain optimal performance for current and future leaders and teams.</p>
 
                     <a href="" class="know-more">Know More</a>
                 </figure>
 
                 <!-- HOW WOMEN RISE  -->
                 <figure class="solutions__item solutions__item--long d-grid grid-long">
-                    <h3 class="grey-subtitle solutions__item-title">
+                    <h3 class="grey-subtitle solutions__item-title solutions__item-title--sm align-center-min">
                         <img src="./assets/item-3.svg" class="icon icon-m-none" alt="learning solution icons"> HOW WOMEN RISE TRAIN THE TRAINER </h3>
 
-                    <p class="grey-text center-text lh-1-5">Powered by Sally Helgesen -Premier Women In Leadership Expert and Bestselling Author of How Women, the world’s first How Women Rise Online Train the Trainer Program is now available for organisations to certify your own inhouse trainers.</p>
+                    <p class="grey-text center-text lh-1-5 left-text-med">Powered by Sally Helgesen -Premier Women In Leadership Expert and Bestselling Author of How Women, the world’s first How Women Rise Online Train the Trainer Program is now available for organisations to certify your own inhouse trainers.</p>
 
                     <a href="" class="know-more">Know More</a>
                 </figure>
@@ -126,11 +188,11 @@
 
         <!-- Partners -->
         <section class="partners">
-            <article class="container container-900 d-grid grid-2x1fr">
+            <article class="container container-900 d-grid grid-2x1fr grid-1x1fr-med">
                 <h2 class="grey-title grey-title-big m-none grid-long">Your Partners </h2>
                 <!-- SIMONE -->
                 <article class="partner partner-1 d-grid">
-                    <img src="./assets/simone.svg" alt="">
+                    <img src="./assets/simone.svg" class="partner__img" alt="SImone">
 
                     <div class="partner__content d-grid">
                         <span class="partner__identity d-block">
@@ -144,13 +206,13 @@
                     </div>
                     <figure class="partner__btns d-flex">
                         <a href="#" class="btn--linkedin"><img src="./assets/linkedin.svg" alt=""></a>
-                        <a href="#" class="btn btn--blog">Blog</a>
+                        <a href="#" class="btn btn--biog">Biog</a>
                     </figure>
                 </article>
 
                 <!-- Melissa -->
                 <article class="partner partner-2 d-grid">
-                    <img src="./assets/melissa.svg" alt="">
+                    <img src="./assets/melissa.svg" class="partner__img" alt="Melissa">
 
                     <div class="partner__content d-grid">
                         <span class="partner__identity d-block">
@@ -164,19 +226,65 @@
                             of perspective. </p>
                     </div>
                     <figure class="partner__btns d-flex">
-                        <a href="#" class="btn--linkedin"><img src="./assets/linkedin.svg" alt=""></a>
-                        <a href="#" class="btn btn--blog">Blog</a>
+                        <a href="#" class="btn--linkedin"><img src="./assets/linkedin.svg" alt="Linkedin logo"></a>
+                        <a href="#" class="btn btn--biog">Biog</a>
                     </figure>
                 </article>
 
                 <strong class="strong-text grid-long center-text d-block">At TAG we make a positive difference with our social impact mentoring program. Know how you can be a part of the change at.</strong>
 
-                <img src="./assets/theLink.svg" class="grid-long" alt="">
-
+                <img src="./assets/theLink.svg" class="grid-long partner__bottom-img" alt="THe Link Image">
             </article>
         </section>
+
+        <section class="contact">
+            <article class="container contact_container d-grid grid-2x1fr grid-1x1fr-med">
+
+                <form class="form d-grid">
+                    <h2 class="grey-title grey-title-black contact__title contact__title">GET IN TOUCH</h2>
+                    <input type="text" class="form__input" placeholder="Name">
+                    <input type="email" class="form__input" placeholder="Email">
+                    <textarea class="form__input form__textarea" placeholder="Super chessy Text"></textarea>
+                    <input type="submit" class="btn btn--form" value="SEND">
+                </form>
+                <img src="./assets/contact.svg" alt="" class="contact__img">
+            </article>
+
+        </section>
+
     </main>
 </body>
+
+<footer class="footer  ">
+    <section class="container container d-grid grid-2x1fr grid-1x1fr-med">
+        <!-- contact -->
+        <article class="footer__contact">
+            <h2 class="footer__title footer__title--contact grey-text grey-text--dark">Contact Info</h2>
+            <a href="tel:+971585047181" class="footer__link grey-text grey-text--dark">
+                <img src="./assets/phone.svg" class="icon-min" alt="phone">
+                <p>+971 58 50 47 181</p>
+            </a>
+
+            <a href="mailto:hello@theameliorategroup.com" class="footer__link grey-text grey-text--dark">
+                <img src="./assets/mail.svg" class="icon-min" alt="phone">hello@theameliorategroup.com</a>
+        </article>
+
+        <!-- Newsletter -->
+        <form class="footer__newsletter d-grid">
+            <h2 class="footer__title footer__title--black grey-text grey-text--dark">Get our latest Newsletter</h2>
+            <div class="footer__inputs d-flex">
+                <input type="email" class="footer__input" placeholder="Email">
+                <input type="submit" class="footer__btn btn btn--footer" value="Send">
+            </div>
+        </form>
+
+        <p class="footer-text grey-text bold grid-long center-text">THE AMELIORATE GROUP FZ LLC 2020 DISCLAIMER</p>
+    </section>
+
+</footer>
+<script src="./js/slider.js"></script>
 <script src="./js/navbar.js"></script>
+
+
 
 </html>

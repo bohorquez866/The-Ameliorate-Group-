@@ -1,0 +1,86 @@
+.footer {
+    border-top: 6px solid $secondary-color;
+    background-color: #ececec;
+    @include mq($bpMedium) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    &__contact {
+        align-items: center;
+        row-gap: 5rem;
+        @include mq($bpMedium) {
+            margin-bottom: 3rem;
+            grid-row: 2/3;
+        }
+    }
+    &__newsletter {
+        @include mq($bpMedium) {
+            margin-bottom: 4rem;
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2.6rem;
+        margin-bottom: 2rem;
+        color: #000;
+        &--contact {
+            @include mq($bpMedium) {
+                text-align: center;
+            }
+        }
+        @include mq($bpMedium) {
+            font-size: 1.9rem;
+        }
+    }
+    &__link {
+        @extend .d-flex;
+        align-items: center;
+        color: #000;
+        &:not(:last-of-type) {
+            margin-bottom: 1rem;
+        }
+        @include mq($bpMedium) {
+            flex-wrap: wrap;
+            font-size: 1.9rem;
+            justify-content: center;
+        }
+    }
+    &__inputs {
+        align-self: end;
+        position: relative;
+    }
+    &__input {
+        color: $black;
+        outline: none;
+        border: none;
+        border-radius: 2rem;
+        font-size: 2.2rem;
+        color: $text;
+        background-color: white;
+        padding: 1rem;
+        width: 100%;
+        @include mq($bpMedium) {
+            color: #000;
+            &::placeholder {
+                color: #000;
+            }
+        }
+    }
+    &__btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        height: 100%;
+    }
+    &-text {
+        margin-top: 8rem;
+        font-size: 2.6rem;
+        letter-spacing: 1px;
+        @include mq($bpMedium) {
+            font-size: 2rem;
+            margin-top: 0;
+        }
+    }
+}

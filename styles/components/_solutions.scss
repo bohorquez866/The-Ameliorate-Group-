@@ -1,4 +1,7 @@
 .solutions {
+    @include mq($bpMedium) {
+        padding: 2rem 2rem 5rem 2rem;
+    }
     &-title {
         padding-bottom: 3.8rem;
     }
@@ -11,11 +14,26 @@
         row-gap: 15rem;
         width: 90rem;
         margin: 0 auto;
+        @include mq($bpMedium) {
+            width: auto;
+            row-gap: 5rem;
+        }
     }
     &__item {
         grid-template-rows: auto 1fr auto;
         &:not(:last-of-type) {
             width: 40rem;
+            @include mq($bpMedium) {
+                width: auto;
+            }
+        }
+        &-title {
+            display: flex;
+            align-items: flex-end;
+            font-size: 2.6rem;
+            &--sm {
+                font-size: 2rem;
+            }
         }
         &--long {
             position: relative;
@@ -28,6 +46,9 @@
                 width: 1.3rem;
                 right: -5rem;
                 bottom: -7rem;
+                @include mq($bpMedium) {
+                    display: none;
+                }
             }
         }
     }

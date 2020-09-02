@@ -1,8 +1,11 @@
 $white: #fff;
+$black: #000;
 $secondary-color: #49C5B1;
 $btn-header: #52F2D8;
 $blue: #1FAFD5;
+$soft-blue: #70C6F1;
 $pink: #FF89FF;
+$soft-pink: #FEA6FE;
 $text: #6E6F71;
 $text-dark: #272727;
 //fonts
@@ -13,10 +16,11 @@ sans-serif;
 $tertiary-font: 'Abril Fatface',
 cursive;
 //breakpoint
-$bpLarge: 106.25em;
-$bpBig: 81.25em;
-$bpMedium: 60em;
-$bpSmall: 30em;
+$bpLarge: 106.25em; //1700px
+$bpBig: 81.25em; //1300
+$bpMedium: 60em; //960px
+$bpSmall: 30em; //480px
+$bpXSmall: 21.875em; //350px
 //
 @mixin mq-min($breakpoint) {
     @media only screen and (min-width: $breakpoint) {

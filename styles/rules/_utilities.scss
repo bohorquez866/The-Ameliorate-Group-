@@ -7,9 +7,31 @@
     display: flex;
 }
 
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.align-center-min {
+    @include mq($bpMedium) {
+        display: flex;
+        align-items: center!important;
+    }
+}
+
 //center and align
 .center-text {
     text-align: center;
+}
+
+.left-text-med {
+    @include mq($bpMedium) {
+        text-align: left;
+    }
+}
+
+.bold {
+    font-weight: 700;
 }
 
 .lh-1-5 {
@@ -45,6 +67,36 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
+@include mq($bpMedium) {
+    .grid-2x1fr-med {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-1x1fr-med {
+        grid-template-columns: 1fr;
+    }
+    .grid-3x1fr-med {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-4x1fr-med {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@include mq($bpSmall) {
+    .grid-2x1fr-min {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-1x1fr-min {
+        grid-template-columns: 1fr;
+    }
+    .grid-3x1fr-min {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-4x1fr-min {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 .grid-long {
     grid-column: 1/-1;
 }
@@ -54,8 +106,15 @@
     width: 100rem;
     margin: 0 auto;
     padding: 10rem 0 20rem 0;
+    @include mq($bpMedium) {
+        width: auto;
+        padding: 3rem 0 5rem 0;
+    }
     &-900 {
         width: 90rem;
+        @include mq($bpMedium) {
+            width: auto;
+        }
     }
 }
 
@@ -71,6 +130,9 @@
         left: -5rem;
         background-color: $blue;
     }
+    @include mq($bpMedium) {
+        margin-bottom: 1.5rem;
+    }
 }
 
 //icons
@@ -82,6 +144,11 @@
         margin: 0;
         object-fit: initial;
     }
+    &-min {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 1rem;
+    }
 }
 
 //buttons and anchors
@@ -91,7 +158,8 @@
     appearance: none;
     border-radius: 5rem;
     color: white;
-    display: block;
+    display: flex;
+    align-items: center;
     &--header {
         background-color: $btn-header;
         padding: 2rem 3rem;
@@ -100,6 +168,30 @@
         font-family: $primary-font;
         justify-self: end;
         margin-top: 5rem;
+        @include mq($bpLarge) {
+            font-size: 3.5rem;
+        }
+        @include mq($bpMedium) {
+            font-size: 2.2rem;
+            padding: 1rem 2rem;
+            justify-self: center;
+        }
+        &-desk {
+            @include mq($bpMedium) {
+                display: none;
+            }
+        }
+        &-mobile {
+            display: none;
+            justify-self: center;
+            justify-content: center;
+            width: 19rem;
+            margin: 2.5rem auto 4rem auto;
+            font-size: 1.9rem;
+            @include mq($bpMedium) {
+                display: flex;
+            }
+        }
     }
     &--pink {
         background-color: $pink;
@@ -109,16 +201,43 @@
         font-family: $primary-font;
         justify-self: end;
         margin-top: 5rem;
+        @include mq($bpMedium) {
+            font-size: 2.1rem;
+            padding: 1rem 3rem;
+            ;
+        }
     }
-    &--blog {
+    &--biog {
         padding: .9rem 3rem;
         font-size: 2.6rem;
         background-color: $blue;
+        font-weight: bold;
+        text-transform: uppercase;
+        @include mq($bpMedium) {
+            padding: .9rem 2rem;
+        }
     }
     &--linkedin {
-        padding: 1rem;
+        padding: 1.3rem;
         border-radius: 5rem;
         background-color: $blue;
         margin-right: 3rem;
+    }
+    &--form {
+        padding: .7rem 6rem;
+        background-color: $soft-pink;
+        font-size: 3.2rem;
+        font-weight: bold;
+        letter-spacing: 4px;
+        justify-self: end;
+        @include mq($bpMedium) {
+            padding: .5rem 6rem;
+            justify-self: center;
+        }
+    }
+    &--footer {
+        background-color: $soft-blue;
+        font-size: 2.7rem;
+        padding: .5rem 2rem;
     }
 }

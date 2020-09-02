@@ -1,8 +1,16 @@
 .partner {
     margin-top: 7.7rem;
     width: 42.6rem;
+    grid-template-rows: min-content max-content 1fr;
+    @include mq($bpMedium) {
+        width: auto;
+        padding: 0 2rem;
+    }
     &-2 {
         justify-self: end;
+    }
+    &__img {
+        border-radius: 1rem;
     }
     &__identity {
         font-size: 2.3rem;
@@ -10,14 +18,21 @@
         margin: 2rem 0 4rem 0;
         position: relative;
         line-height: 1;
+        @include mq($bpMedium) {
+            margin: 2rem 0;
+            padding-left: 2rem;
+        }
         &::before {
             content: '';
             position: absolute;
-            background-color: $blue;
+            background-color: $pink;
             height: 100%;
             width: .6rem;
             left: -2rem;
             top: 0;
+            @include mq($bpMedium) {
+                left: 0;
+            }
         }
     }
     &__position {
@@ -25,6 +40,9 @@
     }
     &__content {
         padding: 0 2rem;
+        @include mq($bpMedium) {
+            padding: 0;
+        }
     }
     &__description {
         line-height: 1.5;
@@ -37,5 +55,10 @@
         margin-top: 2rem;
         justify-self: end;
         align-self: end;
+    }
+    &__bottom-img {
+        width: initial;
+        justify-self: center;
+        margin-top: 2rem;
     }
 }

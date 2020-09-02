@@ -22,6 +22,9 @@
         margin: 0 auto;
     }
     &__text {
+        @include mq($bpMedium) {
+            line-height: 1.5;
+        }
         &:not(:last-of-type) {
             margin-bottom: 4rem;
         }
@@ -30,5 +33,10 @@
         display: block;
         margin: 1rem 0 5rem 0;
         font-size: 2.5rem;
+        color: $text;
+        @include mq($bpMedium) {
+            font-size: 1.9rem;
+            text-align: center;
+        }
     }
 }
